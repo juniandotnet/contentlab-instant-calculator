@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	
   <PropertyGroup>
-    <TargetFramework>netstandard1.6</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>InstantCalculator</RootNamespace>
     <PackageVersion>1.0</PackageVersion>
     <Title>InstantCalculator</Title>
@@ -11,6 +11,8 @@
   
   <ItemGroup>
     <PackageReference Include="Eto.Forms" Version="2.4.1" />
+    <PackageReference Include="MvvmReady" Version="1.2.0" />
+    <PackageReference Include="Jint" Version="2.11.58" />
   </ItemGroup>
   
 </Project>
