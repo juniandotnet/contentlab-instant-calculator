@@ -49,8 +49,7 @@ namespace InstantCalculator.ViewModels
             (_calculateCommand = new Command(
             () => 
             {
-                var result = Calculate(MathExpression);
-                MathResult = result == null ? "N/A" : result.ToString();
+                MathResult = Calculate(MathExpression)?.ToString() ?? "N/A";
 
                 var nl = Environment.NewLine;
                 var log = 
