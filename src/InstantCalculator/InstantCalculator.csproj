@@ -3,10 +3,15 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>InstantCalculator</RootNamespace>
-    <PackageVersion>1.0</PackageVersion>
     <Title>InstantCalculator</Title>
     <Copyright>Copyright © 2019</Copyright>
-    <Description>Description of InstantCalculator</Description>
+    <Description>Cross-platform Instant Calculator Desktop App</Description>
+    <Company>Junian</Company>
+    <Product>InstantCalculator</Product>
+    <AssemblyVersion>0.0.1</AssemblyVersion>
+    <FileVersion>$(AssemblyVersion)</FileVersion>
+    <Version>$(AssemblyVersion)</Version>
+    <PackageVersion>$(AssemblyVersion)</PackageVersion>
   </PropertyGroup>
   
   <ItemGroup>
