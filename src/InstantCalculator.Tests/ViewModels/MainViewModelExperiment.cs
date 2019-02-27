@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using InstantCalculator.ViewModels;
 using Xunit;
 
@@ -11,6 +13,34 @@ namespace InstantCalculator.Tests.ViewModels
         public MainViewModelExperiment()
         {
             _vm = new MainViewModel();
+        }
+
+        [Fact]
+        public void CalculateCommandTest()
+        {
+            var logs = new StringBuilder();
+            _vm.AppendLogAction = (log) => logs.Append(log);
+
+            var inputSample = new Dictionary<string, string>
+            {
+                { "1+1", "2" },
+                { "100+10", "110" },
+                { "100 + a", "N/A" },
+            };
+
+            var expectedLogs = new StringBuilder();
+            foreach (var s in inputSample)
+            {
+                expectedLogs.AppendLine($">>> {s.Key}");
+                expectedLogs.AppendLine(s.Value);
+                expectedLogs.AppendLine();
+
+                _vm.MathExpression = s.Key;
+                _vm.CalculateCommand.Execute(null);
+                Assert.Equal(s.Value, _vm.MathResult);
+            }
+
+            Assert.Equal(expectedLogs.ToString(), logs.ToString());
         }
 
         [Theory]
