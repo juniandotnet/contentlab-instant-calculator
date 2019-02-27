@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 using Juniansoft.MvvmReady;
 
 namespace InstantCalculator.ViewModels
@@ -16,7 +17,7 @@ namespace InstantCalculator.ViewModels
         public string MathExpression
         {
             get => _mathExperession;
-            set => Set(ref _mathExperession, value);
+            set => Set(ref _mathExperession, value, "", () => MathResult = "");
         }
 
         private string _mathResult;
@@ -25,6 +26,8 @@ namespace InstantCalculator.ViewModels
             get => _mathResult;
             set => Set(ref _mathResult, value);
         }
+
+        public Action<string> AppendLogAction { get; set; }
 
         public double? Calculate(string mathExpression)
         {
@@ -48,6 +51,11 @@ namespace InstantCalculator.ViewModels
             {
                 var result = Calculate(MathExpression);
                 MathResult = result == null ? "N/A" : result.ToString();
+
+                var nl = Environment.NewLine;
+                var log = 
+                    $">>> {MathExpression}{nl}{MathResult}{nl}{nl}";
+                AppendLogAction?.Invoke(log);
             }));
     }
 }
