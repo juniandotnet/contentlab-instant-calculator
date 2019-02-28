@@ -6,17 +6,18 @@
     <ProductVersion>3.10</ProductVersion>
     <ProjectGuid>c5ad75cd-cd18-4590-bfb4-0325250a2bdd</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>InstantCalculator.Setup</OutputName>
+    <OutputName>InstantCalculator</OutputName>
     <OutputType>Package</OutputType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
-    <DefineConstants>Debug</DefineConstants>
+    <DefineConstants>Debug;ProductVersion=0.0.4;UpgradeCode=F5A50801-CBA9-47C7-B364-53223B60E280;AppProject=InstantCalculator.Wpf;AppName=InstantCalculator;Manufacturer=Junian;AppLink=https://junian.net.net;TargetFramework=net461;</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>ProductVersion=0.0.4;UpgradeCode=F5A50801-CBA9-47C7-B364-53223B60E280;AppProject=InstantCalculator.Wpf;AppName=InstantCalculator;Manufacturer=Junian;AppLink=https://junian.net.net;TargetFramework=net461;</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Product.wxs" />
