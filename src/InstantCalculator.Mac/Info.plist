@@ -3,9 +3,9 @@
 <plist version="1.0">
   <dict>
     <key>CFBundleName</key>
-    <string>InstantCalculator</string>
+    <string>Instant Calculator</string>
     <key>CFBundleIdentifier</key>
-    <string>com.example.InstantCalculator</string>
+    <string>net.junian.instantcalculator</string>
     <key>CFBundleShortVersionString</key>
     <string>1.0</string>
     <key>LSMinimumSystemVersion</key>

@@ -7,7 +7,7 @@
     <ProjectGuid>{21FDCF1B-12C1-47B5-969E-82907F36C624}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>InstantCalculator.Wpf</RootNamespace>
-    <AssemblyName>InstantCalculator.Wpf</AssemblyName>
+    <AssemblyName>InstantCalculator</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <WarningLevel>4</WarningLevel>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -63,6 +66,9 @@
       <Project>{42958AFE-3508-4437-B00B-177A8C4D96D1}</Project>
       <Name>InstantCalculator</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,7 +23,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>net.junian.instantcalculator</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.0.2/string>
+	<string>0.0.2</string>
 	<key>CFBundleVersion</key>
 	<string>0.0.2</string>
 </dict>

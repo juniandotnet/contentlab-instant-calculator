@@ -3,6 +3,8 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net461</TargetFramework>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <AssemblyName>InstantCalculator</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

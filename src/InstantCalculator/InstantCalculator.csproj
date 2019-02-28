@@ -12,6 +12,7 @@
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <Version>$(AssemblyVersion)</Version>
     <PackageVersion>$(AssemblyVersion)</PackageVersion>
+    <AssemblyName>InstantCalculator.Core</AssemblyName>
   </PropertyGroup>
   
   <ItemGroup>
