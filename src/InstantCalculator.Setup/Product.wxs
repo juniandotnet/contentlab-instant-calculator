@@ -48,7 +48,69 @@
 
     <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
       <!--Include Components to be installed in Program Files Here-->
-      
+      <Component Id="InstantCalculatorCoredll"
+                 Guid="*" DiskId="1">
+        <File Id="InstantCalculator.Core.dll"
+              Name="InstantCalculator.Core.dll"
+              Source="..\$(var.AppProject)\bin\$(var.Configuration)\InstantCalculator.Core.dll"
+              KeyPath="yes" />
+      </Component>
+      <Component Id="InstantCalculatorexeconfig"
+                 Guid="*" DiskId="1">
+        <File Id="InstantCalculator.exe.config"
+              Name="InstantCalculator.exe.config"
+              Source="..\$(var.AppProject)\bin\$(var.Configuration)\InstantCalculator.exe.config"
+              KeyPath="yes" />
+      </Component>
+      <Component Id="InstantCalculatorCorepdb"
+                 Guid="*" DiskId="1">
+        <File Id="InstantCalculator.Core.pdb"
+              Name="InstantCalculator.Core.pdb"
+              Source="..\$(var.AppProject)\bin\$(var.Configuration)\InstantCalculator.Core.pdb"
+              KeyPath="yes" />
+      </Component>
+      <Component Id="Jintdll"
+                 Guid="*" DiskId="1">
+        <File Id="Jint.dll"
+              Name="Jint.dll"
+              Source="..\$(var.AppProject)\bin\$(var.Configuration)\Jint.dll"
+              KeyPath="yes" />
+      </Component>
+      <Component Id="Etodll"
+                 Guid="*" DiskId="1">
+        <File Id="Eto.dll"
+              Name="Eto.dll"
+              Source="..\$(var.AppProject)\bin\$(var.Configuration)\Eto.dll"
+              KeyPath="yes" />
+      </Component>
+      <Component Id="InstantCalculatorexe"
+                 Guid="*" DiskId="1">
+        <File Id="InstantCalculator.exe"
+              Name="InstantCalculator.exe"
+              Source="..\$(var.AppProject)\bin\$(var.Configuration)\InstantCalculator.exe"
+              KeyPath="yes" />
+      </Component>
+      <Component Id="InstantCalculatorpdb"
+                 Guid="*" DiskId="1">
+        <File Id="InstantCalculator.pdb"
+              Name="InstantCalculator.pdb"
+              Source="..\$(var.AppProject)\bin\$(var.Configuration)\InstantCalculator.pdb"
+              KeyPath="yes" />
+      </Component>
+      <Component Id="MvvmReadydll"
+                 Guid="*" DiskId="1">
+        <File Id="MvvmReady.dll"
+              Name="MvvmReady.dll"
+              Source="..\$(var.AppProject)\bin\$(var.Configuration)\MvvmReady.dll"
+              KeyPath="yes" />
+      </Component>
+      <Component Id="EtoWpfdll"
+                 Guid="*" DiskId="1">
+        <File Id="Eto.Wpf.dll"
+              Name="Eto.Wpf.dll"
+              Source="..\$(var.AppProject)\bin\$(var.Configuration)\Eto.Wpf.dll"
+              KeyPath="yes" />
+      </Component>
     </DirectoryRef>
 
     <!-- Remove Program Menu shortcut when uninstalled -->
@@ -100,7 +162,16 @@
 
     <Feature Id="MainApplication" Title="Main Application" Level="1">
       <!--Include Component References here-->
-
+      <ComponentRef Id="InstantCalculatorCoredll" />
+      <ComponentRef Id="InstantCalculatorexeconfig" />
+      <ComponentRef Id="InstantCalculatorCorepdb" />
+      <ComponentRef Id="Jintdll" />
+      <ComponentRef Id="Etodll" />
+      <ComponentRef Id="InstantCalculatorexe" />
+      <ComponentRef Id="InstantCalculatorpdb" />
+      <ComponentRef Id="MvvmReadydll" />
+      <ComponentRef Id="EtoWpfdll" />
+      
       <ComponentRef Id="ApplicationShortcut" />
       <ComponentRef Id="ApplicationShortcutDesktop" />
     </Feature>
