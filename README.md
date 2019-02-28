@@ -12,3 +12,10 @@ It may contains bug in here and there, but it should be acceptable to work on an
 
 This software function is intended to replace conventional calculator, where user can directly enter mathematical expression freely in a text box.
 The math evaluation is produced by using a Javascript interpreter called [Jint](https://github.com/sebastienros/jint).
+
+This source code contains 1 Solution with 4 projects.
+
+- **InstantCalculator**: This is library project, contains logic and shared UI code.
+- **InstantCalculator.Tests**: This is unit testing project. The purpose is to create tests for written functions in **InstantCalculator** library project.
+- **InstantCalculator.Wpf**: This is Windows executable project. This project references the library and display the UI.
+- **InstantCalculator.Setup**: This project produces msi installer for Windows.
